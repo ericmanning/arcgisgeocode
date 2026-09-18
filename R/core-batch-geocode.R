@@ -73,7 +73,7 @@ geocode_addresses <- function(
   # obj_check_token(token)
   check_geocoder(geocoder, call = rlang::caller_env())
 
-  if (!"geocode" %in% capabilities(geocoder)) {
+  if (!"geocodeaddresses" %in% capabilities(geocoder)) {
     arg <- rlang::caller_arg(geocoder)
     cli::cli_abort(
       "{.arg {arg}} does not support  the {.path /geocodeAddresses} endpoint"
